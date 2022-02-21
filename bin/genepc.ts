@@ -28,7 +28,7 @@ program
 
       console.log(
         chalk.green(
-          `EPC: ${epc} is in your ${chalk.italic('clipboard')}. ${chalk.bold(emojis)}`,
+          `EPC ${epc} is in your ${chalk.italic('clipboard')}. ${chalk.bold(emojis)}`,
         ),
       );
     } catch (error) {
