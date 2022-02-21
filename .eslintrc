@@ -1,0 +1,20 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:import/typescript"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "plugins": ["@typescript-eslint", "import"],
+    "rules": {
+      "@typescript-eslint/indent": "off",
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-use-before-define": ["error"],
+      "comma-dangle": [2, "always-multiline"],
+      "import/extensions": "off"
+    }
+  }
