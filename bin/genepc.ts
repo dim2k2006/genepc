@@ -24,9 +24,13 @@ program
 
       clipboard.writeSync(epc);
 
-      const emojis = genEmojis(3);
+      const emojis = genEmojis(1);
 
-      console.log(chalk.green(`EPC: ${epc} is in your clipboard. ${emojis}`));
+      console.log(
+        chalk.green(
+          `EPC: ${epc} is in your ${chalk.italic('clipboard')}. ${chalk.bold(emojis)}`,
+        ),
+      );
     } catch (error) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
