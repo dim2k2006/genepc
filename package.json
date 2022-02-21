@@ -1,6 +1,6 @@
 {
   "name": "@dim2k/genepc-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "## Generates EPC from EAN",
   "bin": {
     "genepc": "bin/genepc.js"
@@ -12,7 +12,7 @@
     "lint": "eslint . --ext .ts,.tsx"
   },
   "engines": {
-    "node": "12.16.0"
+    "node": ">=12"
   },
   "keywords": [],
   "author": "Dmitry Malofeev",
@@ -49,5 +49,6 @@
   "bugs": {
     "url": "https://github.com/dim2k2006/genepc/issues"
   },
-  "homepage": "https://github.com/dim2k2006/genepc#readme"
+  "homepage": "https://github.com/dim2k2006/genepc#readme",
+  "files": ["/bin/genepc.js", "/src/index.js"]
 }
