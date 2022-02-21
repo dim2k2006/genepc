@@ -5,7 +5,7 @@ start:
 	npx babel-node -- bin/genepc.js $(ean)
 
 publish:
-	npm publish
+	npm publish --access public
 
 lint:
 	npx eslint .
