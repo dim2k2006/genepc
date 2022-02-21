@@ -3,7 +3,14 @@
 import commander from 'commander';
 import chalk from 'chalk';
 import clipboard from 'clipboardy';
+import emoji from 'node-emoji';
 import eanToEpc from '../src/index';
+
+const genEmojis = (count: number) => {
+  const result = [...new Array(count)].map(() => emoji.random().emoji).join('');
+
+  return result;
+};
 
 const { program } = commander;
 
@@ -17,7 +24,9 @@ program
 
       clipboard.writeSync(epc);
 
-      console.log(chalk.green(`EPC: ${epc} is in your clipboard. `));
+      const emojis = genEmojis(3);
+
+      console.log(chalk.green(`EPC: ${epc} is in your clipboard. ${emojis}`));
     } catch (error) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
