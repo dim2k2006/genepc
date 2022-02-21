@@ -2,7 +2,7 @@ install:
 	npm install
 
 start:
-	npx babel-node --extensions ".ts" -- bin/genepc.ts $(ean)
+	npx babel-node -- bin/genepc.js $(ean)
 
 publish:
 	npm publish
