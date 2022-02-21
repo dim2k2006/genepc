@@ -2,6 +2,7 @@
 
 import commander from 'commander';
 import chalk from 'chalk';
+import clipboard from 'clipboardy';
 import eanToEpc from '../src/index';
 
 const { program } = commander;
@@ -14,7 +15,9 @@ program
     try {
       const epc = eanToEpc(ean);
 
-      console.log(chalk.green('EPC:', epc));
+      clipboard.writeSync(epc);
+
+      console.log(chalk.green(`EPC: ${epc} is in your clipboard. `));
     } catch (error) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore

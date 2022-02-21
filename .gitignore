@@ -3,3 +3,5 @@ dist
 .idea
 .env
 build
+./bin/*.js
+./src/*.js
